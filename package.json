@@ -1,0 +1,30 @@
+{
+  "name": "requirehit-browser",
+  "version": "0.0.1",
+  "description": "browser-side requirehit engine",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/requirehit/browser.git"
+  },
+  "keywords": [
+    "browser",
+    "side",
+    "package",
+    "module",
+    "loader"
+  ],
+  "author": "findhit",
+  "license": "GPL v3",
+  "bugs": {
+    "url": "https://github.com/requirehit/browser/issues"
+  },
+  "homepage": "https://github.com/requirehit/browser",
+  "dependencies": {
+    "findhit-class": "^0.1.1",
+    "findhit-util": "^0.2.7"
+  }
+}
