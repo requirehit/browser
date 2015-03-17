@@ -1,5 +1,4 @@
 var pkg = require( './package' ),
-    Util = require( 'findhit-util' ),
     fs = require( 'fs' ),
     l = function ( l ) { console.log( "requirehit-browser: " + l ); };
 
