@@ -1,6 +1,8 @@
 # We might need to edit ecosystem because of the lack of api options on pm2 deploy
 config/ecosystem.edited.json
 
+dist/
+
 # Node Modules #
 ######################
 node_modules/

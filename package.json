@@ -4,6 +4,8 @@
   "description": "browser-side requirehit engine",
   "main": "index.js",
   "scripts": {
+    "dist-build": "node build.js",
+    "dist-clean": "rm -fR dist/",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -26,5 +28,10 @@
   "dependencies": {
     "findhit-class": "^0.1.1",
     "findhit-util": "^0.2.7"
+  },
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-uglify": "^0.8.0",
+    "grunt-wrap": "^0.3.0"
   }
 }
