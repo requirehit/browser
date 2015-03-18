@@ -1,19 +1,4 @@
-# We might need to edit ecosystem because of the lack of api options on pm2 deploy
-config/ecosystem.edited.json
-
-dist/
-
-# Node Modules #
-######################
 node_modules/
-
-
-# Sublime text #
-######################
-*.sublime-workspace
-
-# OS generated files #
-######################
 .DS_Store
 .DS_Store?
 ._*
@@ -23,8 +8,5 @@ Icon?
 ehthumbs.db
 Thumbs.db
 
-
-## Specific files
 npm-debug.log
-
-.config
+dist.js
