@@ -10,3 +10,6 @@ Thumbs.db
 
 npm-debug.log
 dist.js
+dist.min.js
+dist.html
+dist.min.html

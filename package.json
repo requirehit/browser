@@ -27,6 +27,7 @@
   "homepage": "https://github.com/requirehit/browser",
   "devDependencies": {
     "bluebird": "^2.9.14",
-    "findhit-util": "^0.2.7"
+    "findhit-util": "^0.2.7",
+    "uglify-js": "^2.4.17"
   }
 }
