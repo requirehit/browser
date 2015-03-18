@@ -2,9 +2,19 @@ var Util = require( 'findhit-util' ),
     path = require( 'path' ),
     Promise = require( 'bluebird' ),
 
-    l = require( './tools/logger' )( 'builder' );
+    Logger = require( './tools/logger' ),
+
+    l = Logger( 'builder' );
 
 // -----------------------------------------------------------------------------
+
+
+/**
+ * Logger
+ *
+ * this metod is exposed so other builders could use it easily
+ */
+exports.Logger = Logger;
 
 
 /**
@@ -27,12 +37,18 @@ Builders.process = require( './process' );
  */
 exports.build = function ( options ) {
 
+  // Prepare options
+  options = Util.is.Object( options ) && options || {};
+  options.__proto__ = exports.build.defaultOptions;
+
+  var builders = Util.extend( {},
+    Builders,
+    Util.is.Object( options.Builders ) && options.Builders || {}
+  );
+
   //
   l( "Building..." );
   //
-
-  // Prepare options
-  options = Util.is.Object( options ) && options || {};
 
   return Promise
   .cast( Object.keys( Builders ) )
@@ -63,4 +79,17 @@ exports.build = function ( options ) {
 
     return '"use strict"; (function ( __global__ ) {\n'+ entire +'\n})( window || global || this );';
   });
+};
+
+
+/**
+ * Default options for .build method
+ */
+exports.build.defaultOptions = {
+
+  /**
+   * Add builders to build process, needed to inject adapter's builders
+   */
+  Builders: undefined,
+
 };
