@@ -3,8 +3,11 @@ requirehit-browser
 
 **browser-side requirehit engine**
 
-This repo contains cross-browser code to: setup, download, decode and require
-**requirehit** packages.
+**requirehit engine** uses lots of source code available on **nodejs**, in fact,
+it's almost like a cross-browser compatible fork of **nodejs**.
+
+This repo contains code to: setup, download, decode and require **requirehit**
+packages.
 
 ## Building dist file
 
@@ -14,8 +17,8 @@ This repo contains cross-browser code to: setup, download, decode and require
 
 ```
 
-This will create `dist/output.js` which should be used by `requirehit` to create
-an initial bundle file.
+This will allow a build with extendable options which should be used by
+`requirehit` package to create its initial bundle file.
 
 ## Cleaning dist
 
