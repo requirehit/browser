@@ -27,6 +27,7 @@ var Builders = exports.Builders = {};
 
 Builders.global = require( './global' );
 Builders.process = require( './process' );
+Builders.requirehit = require( './requirehit' );
 
 
 /**

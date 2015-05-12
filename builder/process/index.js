@@ -45,6 +45,9 @@ function builder ( options ) {
     // process post bindings
     fs.readFileAsync( __dirname + '/' + '../../lib/process/post-bindings.js' ),
 
+    // globals loading, such as Buffer
+    fs.readFileAsync( __dirname + '/' + '../../lib/process/globals.js' ),
+
   ])
   .reduce(function ( entire, part ) {
     return entire + '\n' + part;
