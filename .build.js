@@ -9,7 +9,7 @@ builder.build({
   requirehit: {
     main: '/index.js',
     files: {
-      '/index.js': 'console.log("lola")',
+      '/index.js': 'exports.test = "lola"; console.log(exports);',
     }
   },
 })
