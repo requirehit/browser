@@ -18,9 +18,10 @@ function builder ( options ) {
   }
 
   return Promise.all([
+    "var main = '"+ options.main +"';",
     "var files = "+ jsStringifier( options.files ) +";",
-    "Object.keys( files ).forEach(function ( file ) { NativeModule.require( 'fs' ).writeFileSync( file, files[ file ] ); });",
-    "NativeModule.require( 'module' )._load( '"+ options.main +"', null, true );"
+    fs.readFileAsync( __dirname + '/' + '../../lib/requirehit/fs-populator.js' ),
+    fs.readFileAsync( __dirname + '/' + '../../lib/requirehit/main-module-loader.js' ),
   ])
   .reduce(function ( entire, part ) {
     return entire + '\n' + part;
